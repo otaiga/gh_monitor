@@ -8,7 +8,7 @@ def gh_issue
 end
 
 def issue_count
-  gh_issue.get_count
+  gh_issue.issue_count
 end
 
 def arduino_client
@@ -25,6 +25,6 @@ begin
     sleep(10)
   end
 rescue => e
-  puts "Error withe #{e}"
+  puts "Error with #{e}"
   retry
 end

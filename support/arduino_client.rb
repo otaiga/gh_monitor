@@ -1,8 +1,9 @@
 require 'bundler/setup'
 require 'dino'
 
+# Simple class for arduino connection
 class ArduinoClient
-  def blink(duration=10, sleep_count=1)
+  def blink(duration = 10, sleep_count = 1)
     states.cycle(duration) do |switch|
       led_red.send(switch)
       sleep(sleep_count.to_i)
@@ -24,7 +25,7 @@ class ArduinoClient
     Dino::Board.new(Dino::TxRx::Serial.new)
   end
 
-  def run_alert(duration=10, sleep_count=1)
+  def run_alert(duration = 10, sleep_count = 1)
     blink(duration, sleep_count)
   end
 end
