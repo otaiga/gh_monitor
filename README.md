@@ -10,8 +10,12 @@ ENV['REPO']
 
 ### To Run
 
+`bundle`
+
+`dino generate-sketch serial`
+
+  - Open the normal Arduino IDE
+  - Open the .ino file in the du folder that was created.
+  - upload it to the arduino.
+
 `./bin/app.rb`
-
-## To Do
-
-- Add a config.rb for easier use.
